@@ -1,0 +1,28 @@
+/* Form globale */
+.outil-form {
+  max-width: 1000px;
+}
+
+/* Grid des champs */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 32px; /* vertical / horizontal */
+}
+
+/* Champ pleine largeur */
+.span-2 {
+  grid-column: span 2;
+}
+
+/* Champs Material */
+mat-form-field {
+  width: 100%;
+}
+
+/* Actions */
+.form-actions {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+}

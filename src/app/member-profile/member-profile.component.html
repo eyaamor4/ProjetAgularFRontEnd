@@ -1,0 +1,30 @@
+<div class="profile-container">
+  <div class="profile-card">
+
+    <div class="profile-header">
+      <div class="avatar">
+        <span>{{ member?.nom?.charAt(0) }}</span>
+      </div>
+      <h2>Mon Profil</h2>
+      <p class="subtitle">{{ member?.type }}</p>
+    </div>
+
+    <div class="profile-body">
+      <div class="info-row">
+        <span class="label">Nom</span>
+        <span class="value">{{ member?.nom }} {{ member?.prenom }}</span>
+      </div>
+
+      <div class="info-row">
+        <span class="label">Email</span>
+        <span class="value">{{ member?.email }}</span>
+      </div>
+
+      <div class="info-row">
+        <span class="label">Type</span>
+        <span class="value badge">{{ member?.type }}</span>
+      </div>
+    </div>
+
+  </div>
+</div>

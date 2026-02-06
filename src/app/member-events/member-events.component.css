@@ -1,0 +1,49 @@
+.events-title {
+  margin-bottom: 30px;
+}
+
+/* liste */
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+}
+
+/* un événement */
+.event-item {
+  padding: 16px 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+/* titre */
+.event-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* meta infos */
+.event-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* icônes */
+.event-lieu::before {
+  content: "📍 ";
+}
+
+.event-date::before {
+  content: "📅 ";
+}
+
+/* vide */
+.empty {
+  color: #777;
+  font-style: italic;
+}

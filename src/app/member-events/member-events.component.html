@@ -1,0 +1,16 @@
+<h2 class="events-title">Les Événements</h2>
+
+<div *ngIf="events.length > 0" class="events-list">
+  <div class="event-item" *ngFor="let e of events">
+    <div class="event-title">{{ e.intitule }}</div>
+
+    <div class="event-meta">
+      <span class="event-lieu">{{ e.lieu }}</span>
+      <span class="event-date">{{ e.dateEvenement | date }}</span>
+    </div>
+  </div>
+</div>
+
+<p *ngIf="events.length === 0" class="empty">
+  Aucun événement disponible.
+</p>

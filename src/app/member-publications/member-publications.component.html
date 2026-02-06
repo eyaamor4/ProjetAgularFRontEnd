@@ -1,0 +1,15 @@
+<h2>Mes Publications</h2>
+
+<div *ngIf="publications.length === 0">
+  Aucune publication pour le moment.
+</div>
+
+<ul>
+  <li *ngFor="let p of publications" style="margin-bottom:6px;">
+    <strong>{{p.titre}}</strong> — {{p.type}} — {{p.dateApparition | date}}
+    <span *ngIf="p.sourcePdf">
+      &nbsp;|&nbsp;
+      <a [href]="p.sourcePdf" target="_blank">PDF</a>
+    </span>
+  </li>
+</ul>

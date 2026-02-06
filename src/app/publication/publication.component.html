@@ -1,0 +1,61 @@
+<button  class="btn-create" routerLink="/admin/publications/create">Créer une publication</button>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!-- ID -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let el"> {{el.id}} </td>
+  </ng-container>
+
+  <!-- TYPE -->
+  <ng-container matColumnDef="type">
+    <th mat-header-cell *matHeaderCellDef> Type </th>
+    <td mat-cell *matCellDef="let el"> {{el.type}} </td>
+  </ng-container>
+
+ <!-- TITLE -->
+<ng-container matColumnDef="titre">
+  <th mat-header-cell *matHeaderCellDef> Titre </th>
+  <td mat-cell *matCellDef="let el"> {{el.titre}} </td>
+</ng-container>
+
+<!-- DATE -->
+<ng-container matColumnDef="dateApparition">
+  <th mat-header-cell *matHeaderCellDef> Date </th>
+  <td mat-cell *matCellDef="let el"> {{el.dateApparition | date}} </td>
+</ng-container>
+
+
+  <!-- AUTEURS -->
+<ng-container matColumnDef="auteurs">
+  <th mat-header-cell *matHeaderCellDef> Auteurs </th>
+  <td mat-cell *matCellDef="let el">
+    {{ getAuthorNames(el.auteurs) }}
+  </td>
+</ng-container>
+
+  <!-- PDF -->
+ <ng-container matColumnDef="sourcePdf">
+  <th mat-header-cell *matHeaderCellDef> PDF </th>
+  <td mat-cell *matCellDef="let el">
+    <a *ngIf="el.sourcePdf">{{ el.sourcePdf }}</a>
+    <span *ngIf="!el.sourcePdf">—</span>
+  </td>
+</ng-container>
+
+
+  <!-- ACTION -->
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let el">
+      <button routerLink="/admin/publications/{{el.id}}/edit">
+<mat-icon>edit</mat-icon></button>
+      <button (click)="delete(el.id)"><mat-icon>delete</mat-icon></button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>

@@ -1,0 +1,76 @@
+<h2>{{ isEdit ? 'Modifier un outil' : 'Créer un outil' }}</h2>
+
+<form [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+      class="outil-form">
+
+  <!-- ===== CHAMPS ===== -->
+  <div class="form-grid">
+
+    <!-- ID -->
+    <mat-form-field appearance="fill">
+      <mat-label>ID</mat-label>
+      <input matInput formControlName="id">
+    </mat-form-field>
+
+    <!-- Nom -->
+    <mat-form-field appearance="fill">
+      <mat-label>Nom</mat-label>
+      <input matInput formControlName="nom">
+    </mat-form-field>
+
+    <!-- Description (pleine largeur) -->
+    <mat-form-field appearance="fill" class="span-2">
+      <mat-label>Description</mat-label>
+      <input matInput formControlName="description">
+    </mat-form-field>
+
+    <!-- Technologie -->
+    <mat-form-field appearance="fill">
+      <mat-label>Technologie</mat-label>
+      <input matInput formControlName="technologie">
+    </mat-form-field>
+
+    <!-- Source -->
+    <mat-form-field appearance="fill">
+      <mat-label>Source</mat-label>
+      <input matInput formControlName="lienSource">
+    </mat-form-field>
+
+    <!-- Date -->
+    <mat-form-field appearance="fill">
+      <mat-label>Date de création</mat-label>
+      <input matInput type="date" formControlName="dateCreation">
+    </mat-form-field>
+
+  </div>
+<!-- Auteur -->
+<mat-form-field appearance="fill">
+  <mat-label>Auteur</mat-label>
+  <mat-select formControlName="auteur">
+    <mat-option *ngFor="let m of members" [value]="m.id">
+      {{ m.nom }} {{ m.prenom }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+  <!-- ===== ACTIONS ===== -->
+  <div class="form-actions">
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      class="btn-create"
+      [disabled]="form.invalid">
+      {{ isEdit ? 'Mettre à jour' : 'Créer' }}
+    </button>
+
+    <button
+      mat-stroked-button
+      class="btn-cancel"
+      routerLink="/admin/tools">
+      Annuler
+    </button>
+  </div>
+
+</form>

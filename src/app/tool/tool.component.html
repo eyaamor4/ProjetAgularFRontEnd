@@ -1,0 +1,62 @@
+<button routerLink="/admin/tools/create" class="btn-create">Créer un outil</button>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!-- ID -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>ID</th>
+    <td mat-cell *matCellDef="let t">{{ t.id }}</td>
+  </ng-container>
+<ng-container matColumnDef="nom">
+  <th mat-header-cell *matHeaderCellDef> Nom </th>
+  <td mat-cell *matCellDef="let t"> {{ t.nom }} </td>
+</ng-container>
+<ng-container matColumnDef="description">
+  <th mat-header-cell *matHeaderCellDef> Description </th>
+  <td mat-cell *matCellDef="let t"> {{ t.description || '—' }} </td>
+</ng-container>
+
+<ng-container matColumnDef="technologie">
+  <th mat-header-cell *matHeaderCellDef> Technologie </th>
+  <td mat-cell *matCellDef="let t"> {{ t.technologie || '—' }} </td>
+</ng-container>
+
+
+<ng-container matColumnDef="auteur">
+  <th mat-header-cell *matHeaderCellDef> Auteur </th>
+  <td mat-cell *matCellDef="let o">
+    {{ o.auteur?.nom }} {{ o.auteur?.prenom }}
+  </td>
+</ng-container>
+
+
+  <!-- Date -->
+ <ng-container matColumnDef="dateCreation">
+  <th mat-header-cell *matHeaderCellDef>Date</th>
+  <td mat-cell *matCellDef="let t">{{ t.dateCreation | date }}</td>
+</ng-container>
+
+
+  <!-- Source -->
+ <ng-container matColumnDef="lienSource">
+  <th mat-header-cell *matHeaderCellDef>Source</th>
+  <td mat-cell *matCellDef="let t">{{ t.lienSource }}</td>
+</ng-container>
+
+
+  <!-- ACTION -->
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef>Action</th>
+    <td mat-cell *matCellDef="let t">
+      <button routerLink="/admin/tools/{{t.id}}/edit">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button (click)="delete(t.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>

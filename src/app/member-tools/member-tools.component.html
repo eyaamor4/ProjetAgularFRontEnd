@@ -1,0 +1,17 @@
+<h2 class="tools-title">Mes Outils</h2>
+
+<div *ngIf="outils.length === 0" class="empty">
+  Aucun outil pour le moment.
+</div>
+
+<div *ngIf="outils.length > 0" class="tools-list">
+  <div class="tool-item" *ngFor="let o of outils">
+    <div class="tool-title">{{ o.nom }}</div>
+
+    <div class="tool-meta" *ngIf="o.lienSource">
+      <a [href]="o.lienSource" target="_blank" class="tool-link">
+        Code source
+      </a>
+    </div>
+  </div>
+</div>

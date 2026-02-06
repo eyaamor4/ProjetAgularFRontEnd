@@ -1,0 +1,53 @@
+.tools-title {
+  margin-bottom: 30px;
+}
+
+/* liste (supposée grande) */
+.tools-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+}
+
+/* un outil */
+.tool-item {
+  padding: 16px 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+/* nom outil */
+.tool-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* meta */
+.tool-meta {
+  font-size: 14px;
+  color: #666;
+}
+
+/* lien */
+.tool-link {
+  color: #673ab7;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.tool-link::before {
+  content: "🔗 ";
+}
+
+.tool-link:hover {
+  text-decoration: underline;
+}
+
+/* vide */
+.empty {
+  color: #777;
+  font-style: italic;
+}

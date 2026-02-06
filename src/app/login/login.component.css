@@ -1,0 +1,75 @@
+/* Centrer la page */
+.login-container {
+  height: calc(100vh - 64px); /* ajuste si navbar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f4f6f8;
+}
+
+/* Carte */
+.login-container form {
+  width: 360px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre */
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #5e35b1;
+  font-weight: 600;
+}
+
+/* Champs */
+.login-container form div {
+  margin-bottom: 18px;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #444;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: border 0.3s;
+}
+
+.login-container input:focus {
+  outline: none;
+  border-color: #5e35b1;
+}
+
+/* Bouton */
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background: #5e35b1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-container button:hover {
+  background: #4527a0;
+}
+
+/* Message d’erreur */
+.login-container p {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 14px;
+}

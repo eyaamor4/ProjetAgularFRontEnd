@@ -1,0 +1,95 @@
+<form *ngIf="form"
+      [formGroup]="form"
+      (ngSubmit)="onsub()"
+      class="member-form">
+
+  <!-- ===== INFORMATIONS ===== -->
+  <div class="form-grid">
+
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="CIN" formControlName="cin">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="Nom" formControlName="nom">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="Prénom" formControlName="prenom">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="Email" formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="Mot de passe" formControlName="password">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <input matInput type="date"
+             placeholder="Date de naissance"
+             formControlName="dateNaissance">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="Grade" formControlName="grade">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="Établissement" formControlName="etablissement">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Type</mat-label>
+      <mat-select formControlName="type">
+        <mat-option value="ens">Enseignant</mat-option>
+        <mat-option value="etd">Étudiant</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field
+  appearance="fill"
+  *ngIf="form.get('type')?.value === 'etd'">
+  <input matInput placeholder="Diplôme" formControlName="diplome">
+</mat-form-field>
+
+    <mat-form-field
+      appearance="fill"
+      *ngIf="form.get('type')?.value === 'etd'">
+      <mat-label>Encadreur</mat-label>
+      <mat-select formControlName="encadreur">
+        <mat-option *ngFor="let t of teachers" [value]="t.id">
+          {{ t.nom }} {{ t.prenom }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </div>
+
+  <!-- ===== DOCUMENTS ===== -->
+  <h3 class="section-title">Documents</h3>
+
+  <div class="upload-box">
+    <label class="upload-label">📷 Photo (image)</label>
+    <input type="file"
+           (change)="onPhotoSelected($event)"
+           accept="image/*">
+  </div>
+
+  <div class="upload-box">
+    <label class="upload-label">📄 CV (PDF)</label>
+    <input type="file"
+           (change)="onCvSelected($event)"
+           accept="application/pdf">
+  </div>
+  
+
+
+  <!-- ACTIONS -->
+  <div class="form-actions">
+    <button mat-raised-button color="primary" type="submit">
+      Enregistrer
+    </button>
+  </div>
+
+</form>

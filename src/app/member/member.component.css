@@ -1,0 +1,30 @@
+.btn-create {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  background-color: #5e35b1;   /* violet */
+  color: #fff;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  margin: 12px 0;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-create:hover {
+  background-color: #4527a0;
+  transform: translateY(-1px);
+}
+
+.btn-create:active {
+  transform: translateY(0);
+}

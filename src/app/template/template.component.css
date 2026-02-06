@@ -1,0 +1,78 @@
+.sidenav-container {
+  height: 100vh;
+}
+
+mat-sidenav {
+  box-shadow: 3px 0 6px rgba(0,0,0,.24);
+}
+
+.active {
+  background-color: rgba(103, 58, 183, 0.1);
+  border-left: 4px solid #673ab7;
+}
+
+mat-nav-list a {
+  transition: background-color 0.3s ease;
+}
+
+mat-nav-list a:hover {
+  background-color: rgba(103, 58, 183, 0.05);
+}
+
+mat-sidenav-content {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ede7f6, #e3f2fd);
+}
+
+.content-wrapper {
+  padding: 20px;
+  min-height: calc(100vh - 64px);
+  box-sizing: border-box;
+}
+
+.mat-drawer-content {
+  background: transparent !important;
+}
+
+.app-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.mat-toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 16px;
+}
+
+.user-name {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.logout-btn mat-icon {
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+}

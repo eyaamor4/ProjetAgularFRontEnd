@@ -1,0 +1,123 @@
+{
+  "membre": [
+    {
+      "id": "ERIkfLbigITYCxQwNx1LzA8Hcaz2",
+      "cin": "55555555",
+      "name": "ranim",
+      "prenom": "mekki",
+      "email": "ranim.makki@gmail.com",
+      "password": "ranim",
+      "dateNaissance": "2002-12-19",
+      "grade": "STudent",
+      "etablissement": "ISBS",
+      "type": "student",
+      "encadreur": null,
+      "photo": "",
+      "cv": "",
+      "createdDate": "2025-12-03T21:03:44.667Z"
+    },
+    {
+      "id": "c431",
+      "cin": "12121212",
+      "name": "Amor",
+      "prenom": "Eya",
+      "email": "eyaamor519@gmail.com",
+      "password": "123456",
+      "dateNaissance": "2025-11-11",
+      "grade": "a",
+      "etablissement": "enis",
+      "type": "student",
+      "encadreur": "6f42",
+      "photo": "",
+      "cv": "",
+      "createdDate": "2025-12-04T00:15:50.450Z"
+    },
+    {
+      "cin": "1111",
+      "name": "sof",
+      "prenom": "soff",
+      "email": "sof@gmail.com",
+      "password": "000",
+      "dateNaissance": "2505-02-12",
+      "grade": "etud",
+      "etablissement": "aaaaaaaaaaaaaaaaa",
+      "type": "student",
+      "encadreur": null,
+      "photo": "",
+      "cv": "",
+      "createdDate": "2026-01-11T18:23:51.877Z",
+      "id": "5f9b"
+    }
+  ],
+  "outil": [
+    {
+      "id": "OUT001",
+      "Date": "2025-10-09T10:30:00Z",
+      "Source": "MachineLaser"
+    },
+    {
+      "id": "OUT002",
+      "Date": "2002-02-01",
+      "Source": "Machine Technique"
+    }
+  ],
+  "publication": [
+    {
+      "type": "Rapport technique",
+      "title": "Amélioration de la traçabilité RFID pour les instruments chirurgicaux",
+      "date": "2025-09-25T14:30:00Z",
+      "lien": "https://www.steros.fr/publications/tracabilite-rfid",
+      "auteurs": [
+        "ERIkfLbigITYCxQwNx1LzA8Hcaz2"
+      ],
+      "sourcePdf": "https://www.steros.fr/docs/tracabilite-rfid.pdf",
+      "id": "PUB002"
+    },
+    {
+      "type": "Thèse",
+      "title": "AI 2025",
+      "date": "2022-02-12",
+      "lien": null,
+      "auteurs": [
+        "ERIkfLbigITYCxQwNx1LzA8Hcaz2"
+      ],
+      "sourcePdf": null,
+      "id": "7b29"
+    }
+  ],
+  "evt": [
+    {
+      "titre": "EVENEMENTscientifique sfax ",
+      "date": "2025-09-20T09:00:00Z",
+      "lieu": "sfax",
+      "id": "EVT1"
+    },
+    {
+      "id": "4c69",
+      "titre": "Conferance AI",
+      "date": "12-02-2025",
+      "lieu": "sfax"
+    }
+  ],
+  "article": [
+    {
+      "titre": "ARTICLE3",
+      "contenu": "je ne sais pas trop",
+      "date": "2025-12-09",
+      "auteurs": [
+        "ERIkfLbigITYCxQwNx1LzA8Hcaz2",
+        "c431"
+      ],
+      "id": "92f3"
+    },
+    {
+      "id": "8488",
+      "titre": "ARTICLE1",
+      "contenu": "JE SAIS PAS",
+      "date": "2025-12-09",
+      "auteurs": [
+        "c431"
+      ]
+    }
+  ]
+}

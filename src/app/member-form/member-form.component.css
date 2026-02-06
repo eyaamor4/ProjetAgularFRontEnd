@@ -1,0 +1,40 @@
+/* Form global */
+.member-form {
+  max-width: 1100px;
+}
+
+/* Grid des champs */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 32px; /* espace vertical / horizontal */
+}
+
+/* Champs Material */
+mat-form-field {
+  width: 100%;
+}
+
+/* Section */
+.section-title {
+  margin: 40px 0 16px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Upload */
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.upload-label {
+  font-weight: 500;
+}
+
+/* Actions */
+.form-actions {
+  margin-top: 32px;
+}

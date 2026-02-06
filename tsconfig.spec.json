@@ -5,7 +5,8 @@
     "outDir": "./out-tsc/spec",
     "types": [
       "jasmine"
-    ]
+    ],
+    "skipLibCheck": true        // ✔ FIX: ignore lib errors in tests
   },
   "include": [
     "src/**/*.spec.ts",

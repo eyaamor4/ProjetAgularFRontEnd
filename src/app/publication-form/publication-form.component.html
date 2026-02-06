@@ -1,0 +1,66 @@
+<h2>{{ isEdit ? 'Modifier la publication' : 'Créer une publication' }}</h2>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="member-form">
+
+  <!-- TYPE -->
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Type</mat-label>
+    <mat-select formControlName="type">
+      <mat-option value="Article scientifique">Article scientifique</mat-option>
+      <mat-option value="Rapport technique">Rapport technique</mat-option>
+      <mat-option value="Communication">Communication</mat-option>
+      <mat-option value="Thèse">Thèse</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- TITRE -->
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Titre</mat-label>
+    <input matInput formControlName="titre">
+  </mat-form-field>
+
+  <!-- DATE -->
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Date</mat-label>
+    <input matInput formControlName="dateApparition" type="date">
+  </mat-form-field>
+
+  <!-- LIEN -->
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Lien</mat-label>
+    <input matInput formControlName="lien">
+  </mat-form-field>
+
+  <!-- AUTEURS -->
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Auteurs</mat-label>
+    <mat-select formControlName="auteurs" multiple>
+      <mat-option *ngFor="let m of members" [value]="m.id">
+        {{ m.nom }} {{ m.prenom }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <h3 class="section-title">Documents</h3>
+
+<div class="upload-box">
+  <label class="upload-label">📄 PDF</label>
+  <input type="file" accept="application/pdf" (change)="uploadPdf($event)">
+
+  <p *ngIf="pdfUrl">
+    PDF chargé :
+    <a [href]="pdfUrl" target="_blank">Voir</a>
+  </p>
+</div>
+
+
+  <!-- BOUTONS -->
+  <button mat-raised-button color="primary" type="submit" class="btn-create" [disabled]="form.invalid">
+    {{ isEdit ? 'Mettre à jour' : 'Créer' }}
+  </button>
+
+  <button mat-button color="warn" routerLink="/admin/publications">
+    Annuler
+  </button>
+
+</form>
