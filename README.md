@@ -1,27 +1,61 @@
-# ProjAngu
+# Application de Gestion d'un Laboratoire de Recherche
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+## Description
 
-## Development server
+Ce projet consiste en une application Web permettant la gestion d'un laboratoire de recherche. L'objectif est de gérer les membres, publications, événements, outils développés, et autres aspects liés à un laboratoire de recherche. Les membres peuvent être des étudiants ou des enseignants-chercheurs, et chaque membre peut contribuer au laboratoire de différentes manières : en publiant des articles, en développant des outils open source, et en participant à des événements.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+L'application permet également aux visiteurs de consulter les membres du laboratoire, leurs publications, télécharger des outils, et rechercher des publications ou membres selon divers critères.
 
-## Code scaffolding
+### Architecture du projet
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Le projet est composé de plusieurs services interconnectés :
 
-## Build
+- **Membre-service** : Gère les informations des membres (étudiants et enseignants chercheurs).
+- **Publication-service** : Gère les publications de recherche.
+- **Evènement-service** : Gère les événements organisés par le laboratoire.
+- **Outil-service** : Gère les outils développés et rendus open-source.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Les utilisateurs peuvent interagir avec ces services pour gérer leurs informations personnelles, publications, événements auxquels ils participent, et bien plus.
 
-## Running unit tests
+## Fonctionnalités
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Membres** : Ajouter, gérer et consulter les membres (étudiants et enseignants chercheurs).
+- **Publications** : Ajouter et consulter les publications scientifiques (articles de journaux, chapitres de livres, etc.).
+- **Outils** : Télécharger des outils développés au sein du laboratoire.
+- **Evénements** : Consulter et participer à des événements organisés par le laboratoire.
+- **Recherches avancées** : Effectuer des recherches par type de publication, année, grade des membres, etc.
+- **Gestion des profils** : Modifier ses informations personnelles, publications, outils, événements, et encadrements.
 
-## Running end-to-end tests
+## Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Prérequis
 
-## Further help
+- **Node.js** (version 12.x ou supérieure)
+- **Angular CLI** (version 11.x ou supérieure)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Installation des dépendances
+
+1. Clonez ce dépôt sur votre machine locale :
+   ```bash
+   git clone https://github.com/eyaamor4/ProjetAgularFRontEnd.git
+   cd ProjetAgularFRontEnd
+npm install
+ng serve
+
+
+### Explication des sections :
+
+1. **Description** : Présente brièvement l'application et son but (gestion d'un laboratoire de recherche).
+2. **Fonctionnalités** : Décrit les fonctionnalités principales du projet, en s'appuyant sur le texte fourni dans le fichier PDF.
+3. **Installation** : Explique les étapes d'installation nécessaires pour exécuter l'application localement.
+4. **Démarrer l'application** : Donne les instructions pour démarrer l'application sur la machine locale.
+5. **Diagramme de Classe** : Cette section peut inclure un lien vers le diagramme de classes de votre application (ajoutez le lien vers l'image du diagramme ou une description plus détaillée si nécessaire).
+6. **Contribuer** : Indique comment les autres peuvent contribuer au projet.
+7. **Auteurs** et **Licence** : Mentionne les auteurs du projet et la licence sous laquelle le code est partagé.
+
+### Ajouter le Diagramme à votre README :
+
+1. Si vous avez un lien direct vers l'image du diagramme (par exemple, si elle est stockée dans le dépôt ou sur un autre service), vous pouvez ajouter le lien dans la section **Diagramme de Classe**.
+2. Si l'image est sur votre machine, vous pouvez la télécharger dans votre dépôt GitHub et utiliser ce lien pour l'ajouter au README.
+
+Cela vous donnera un bon point de départ pour documenter votre projet ! Si vous avez d'autres détails à ajouter ou des questions, n'hésitez pas à demander.
